@@ -10,13 +10,13 @@
     <title>Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/vendors/bootstrap.css" rel="stylesheet">
+    <link href="{{ URL::asset( '/css/vendors/bootstrap.css' ) }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/vendors/bootstrap-theme.css" rel="stylesheet">
+    <link href="{{ URL::asset( '/css/vendors/bootstrap-theme.css' ) }}" rel="stylesheet">
 
     <!-- SoloApp Stylesheets -->
-    <link href="./css/styles.css" rel="stylesheet">
+    <link href="{{ URL::asset( '/css/styles.css" rel="stylesheet' ) }}">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -69,9 +69,9 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../assets/js/jquery.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/holder.js"></script>
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="{{ URL::asset( '/assets/js/jquery.js' ) }}"></script>
+    <script src="{{ URL::asset( '/dist/js/bootstrap.min.js' ) }}"></script>
+    <script src="{{ URL::asset( '/assets/js/holder.js' ) }}"></script> -->
   </body>
 </html>
