@@ -31,7 +31,37 @@ class UsersController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		//Get data
+		$userDetails = Input::all() ;
+
+		//if($userDetails['token']){
+
+			//return $userDetails['token'] ;
+
+			//Validates
+			$validator = Validator::make($userDetails, User::$rules, User::$messages) ;
+
+			if ($validator->fails()) {
+
+				return $validator->errors() ;
+
+				//return App::abort(500, $validator->messages->all()) ;
+
+			}
+			else{
+
+				$new_user = User::create(array(
+					'username' => $userDetails['username'],
+					'email' => $userDetails['email'],
+					'password' => Hash::make($userDetails['password'])
+				)) ;
+
+				//Login user
+				Auth::loginUsingId($new_user->id);
+
+				return Redirect::route('users/'.$new_user->id) ;
+			}
+		//}
 	}
 
 	/**
