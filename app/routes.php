@@ -15,3 +15,10 @@ Route::get('/', function()
 {
 	return View::make('home');
 });
+
+Route::get('admin', array('as' => 'admin', function(){
+	return View::make('admin.index') ;
+}));
+Route::get('admin/settings', array('as' => 'settings', function(){
+	return View::make('admin.settings') ;
+}));
