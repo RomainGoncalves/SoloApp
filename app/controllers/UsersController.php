@@ -59,7 +59,7 @@ class UsersController extends BaseController {
 				//Login user
 				Auth::loginUsingId($new_user->id);
 
-				return Redirect::route('users/'.$new_user->id) ;
+				return Redirect::route('users.show', $new_user->id) ;
 			}
 		//}
 	}
@@ -72,7 +72,9 @@ class UsersController extends BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$user = User::find($id) ;
+
+		return View::make('users.show')->with('user', $user) ;
 	}
 
 	/**
