@@ -22,6 +22,12 @@ Route::get('login', array('as' => 'login', function(){
 
 }));
 
+Route::get('register', array('as' => 'register', function(){
+
+	return View::make('register');
+
+}));
+
 //Apply auth filter to all routes in admin
 Route::group(array('before' => 'auth'), function(){
 
