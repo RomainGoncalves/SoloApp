@@ -207,7 +207,7 @@
 
             <div class="shortcuts">
                 <ul>
-                    <li><a href="{{ Url::route('settings') }}" title="Support section" class="tip"><span class="icon24 icomoon-icon-cog"></span></a></li>
+                    <li><a href="{{ Url::route('settings') }}" title="Settings section" class="tip"><span class="icon24 icomoon-icon-cog"></span></a></li>
                     <li><a href="#" title="Database backup" class="tip"><span class="icon24 icomoon-icon-database"></span></a></li>
                     <li><a href="charts.html" title="Sales statistics" class="tip"><span class="icon24 icomoon-icon-pie-2"></span></a></li>
                     <li><a href="#" title="Write post" class="tip"><span class="icon24 icomoon-icon-pencil"></span></a></li>
@@ -336,7 +336,7 @@
 
                 <div class="heading">
 
-                    <h3>Dashboard</h3>                    
+                    <h3>@yield('pageTitle')</h3>                    
 
                     <div class="resBtnSearch">
                         <a href="#"><span class="icon16 icomoon-icon-search-3"></span></a>
@@ -354,14 +354,14 @@
                     <ul class="breadcrumb">
                         <li>You are here:</li>
                         <li>
-                            <a href="#" class="tip" title="back to dashboard">
+                            <a href="{{ Url::route('admin') }}" class="tip" title="back to dashboard">
                                 <span class="icon16 icomoon-icon-screen-2"></span>
                             </a> 
                             <span class="divider">
                                 <span class="icon16 icomoon-icon-arrow-right-2"></span>
                             </span>
                         </li>
-                        <li class="active">Dashboard</li>
+                        <li class="active">@yield('pageTitle')</li>
                     </ul>
 
                 </div><!-- End .heading-->

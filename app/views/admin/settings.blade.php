@@ -1,12 +1,18 @@
 @extends('admin.master')
 
+@section('pageTitle')
+
+    Settings
+
+@endsection
+
 @section('container-main')
 <div class="box">
 
 <div class="title">
 
     <h4> 
-        <span>Text fields</span>
+        <span>SoloApp Settings</span>
     </h4>
     
 </div>
@@ -17,7 +23,7 @@
     <div class="form-row row-fluid">
         <div class="span12">
             <div class="row-fluid">
-                <label class="form-label span4" for="normal">Normal field</label>
+                <label class="form-label span4" for="normal">Google Analytics</label>
                 <input class="span8" id="normalInput" type="text" />
             </div>
         </div>
