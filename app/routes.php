@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', array('as' => 'home', function()
 {
 	return View::make('home');
-});
+}) );
 
 Route::get('login', array('as' => 'postLogin', function(){
 
@@ -23,6 +23,8 @@ Route::get('login', array('as' => 'postLogin', function(){
 }));
 
 Route::post('login', array('as' => 'login', 'uses' => 'AuthController@login') ) ;
+
+Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
 
 Route::get('register', array('as' => 'register', function(){
 
@@ -33,9 +35,7 @@ Route::get('register', array('as' => 'register', function(){
 //Apply auth filter to all routes in admin
 Route::group(array('before' => 'auth'), function(){
 
-	Route::get('admin', array('as' => 'admin', function(){
-		return View::make('admin.index') ;
-	}));
+	Route::get('admin', array('as' => 'admin', 'uses' => 'DashboardController@index'));
 	Route::get('admin/settings', array('as' => 'settings', function(){
 		return View::make('admin.settings') ;
 	}));

@@ -160,7 +160,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
                                 <img src="img/admin/avatar.jpg" alt="" class="image" /> 
-                                <span class="txt"></span>
+                                <span class="txt">{{ Auth::user()->username }}</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
@@ -179,7 +179,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href=""><span class="icon16 icomoon-icon-exit"></span> Logout</a></li>
+                        <li><a href="{{ Url::route('logout') }}"><span class="icon16 icomoon-icon-exit"></span> Logout</a></li>
                     </ul>
                 </div><!-- /.nav-collapse -->
               </div>

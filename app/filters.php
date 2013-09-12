@@ -38,6 +38,13 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::guest('login');
 });
 
+Route::filter('auth.level', function()
+{
+	if (Auth::check() && (Auth::user()->level == 1) ){
+		
+	}
+	
+});
 
 Route::filter('auth.basic', function()
 {

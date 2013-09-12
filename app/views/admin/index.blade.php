@@ -7,7 +7,7 @@
             <a href="#">
                 <span class="icon icomoon-icon-users"></span>
                 <span class="txt">Users</span>
-                <span class="notification blue">10</span>
+                <span class="notification blue">{{ $users }}</span>
             </a>
         </li>
         <li>
