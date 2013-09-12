@@ -16,11 +16,13 @@ Route::get('/', function()
 	return View::make('home');
 });
 
-Route::get('login', array('as' => 'login', function(){
+Route::get('login', array('as' => 'postLogin', function(){
 
 	return View::make('login');
 
 }));
+
+Route::post('login', array('as' => 'login', 'uses' => 'AuthController@login') ) ;
 
 Route::get('register', array('as' => 'register', function(){
 

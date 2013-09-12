@@ -4,7 +4,7 @@
 
 <h2>Login</h2>
 
-{{ Form::open(array('class' => 'form-horizontal', 'role' => 'form')) }}
+{{ Form::open(array('route' => 'postLogin', 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form')) }}
 	<div class="form-group">
 	{{ Form::label('username', 'Username', array('class' => 'control-label col-lg-1', 'for' => 'username')) }}
 	<div class="col-lg-6">
